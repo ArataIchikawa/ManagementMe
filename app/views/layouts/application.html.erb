@@ -24,12 +24,15 @@
             <li class="nav-item"><a href="#" class="nav-link text-white">Reports</a></li>
             <li class="nav-item"><a href="#" class="nav-link text-white">Analytics</a></li>
             <li class="nav-item"><a href="#" class="nav-link text-white">Export</a></li>
+            <%= link_to destroy_user_session_path, class: "nav-item" do %>
+              <span class="nav-link text-white">Logout</span>
+            <% end %>
           </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <p class="notice"><%= notice %></p>
-          <p class="alert"><%= alert %></p>
-          <%= yield %>
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+        <%= yield %>
         </div>
       </div>
     </div>
