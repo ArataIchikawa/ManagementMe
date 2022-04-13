@@ -9,6 +9,7 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
     && apt-get install -y --no-install-recommends \
     nodejs \
     yarn \
+    mariadb-client \
     vim
 
 RUN gem install bundler
