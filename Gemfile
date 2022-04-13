@@ -34,6 +34,7 @@ gem 'will_paginate', '3.1.7'
 gem 'will_paginate-bootstrap4'
 gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
+gem 'devise'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
