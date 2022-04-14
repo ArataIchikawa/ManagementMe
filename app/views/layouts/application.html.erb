@@ -10,31 +10,19 @@
   </head>
 
   <body>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar d-flex flex-column flex-shrink-0 p-3 text-dark bg-primary">
-          <%= link_to root_path, class: "d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none" do %>
-            <svg class="bi me-2" width="40" height="20">
-              <use xlink:href="#bootstrap"></use>
-            </svg>
-            <span class="fs-4">Manage Me</span>
-          <% end %>
-          <hr>
-          <ul class="nav nav-sidebar flex-column mb-auto">
-            <li class="nav-item"><a href="#" class="nav-link text-white">Reports</a></li>
-            <li class="nav-item"><a href="#" class="nav-link text-white">Analytics</a></li>
-            <li class="nav-item"><a href="#" class="nav-link text-white">Export</a></li>
-            <%= link_to destroy_user_session_path, class: "nav-item" do %>
-              <span class="nav-link text-white">Logout</span>
-            <% end %>
-          </ul>
-        </div>
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>
-        <%= yield %>
+    <% if user_signed_in? %>
+      <div class="container-fluid sidebar">
+        <div class="row h-100">
+          <%= render 'layouts/sidebar' %>
+          <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <%= render 'layouts/main' %>
+          </div>
         </div>
       </div>
-    </div>
+    <% else %>
+      <div class="container">
+        <%= render 'layouts/main' %>
+      </div>
+    <% end %>
   </body>
 </html>

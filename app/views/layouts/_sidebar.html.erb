@@ -1,0 +1,17 @@
+<div class="col-sm-3 col-md-2 sidebar d-flex flex-column flex-shrink-0 p-3 text-dark bg-primary">
+  <%= link_to root_path, class: "d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none" do %>
+    <svg class="bi me-2" width="40" height="20">
+    <use xlink:href="#bootstrap"></use>
+    </svg>
+    <span class="fs-4">Manage Me</span>
+  <% end %>
+  <hr>
+  <ul class="nav nav-sidebar flex-column mb-auto">
+    <li class="nav-item"><a href="#" class="nav-link text-white">Reports</a></li>
+    <li class="nav-item"><a href="#" class="nav-link text-white">Analytics</a></li>
+    <li class="nav-item"><a href="#" class="nav-link text-white">Export</a></li>
+    <%= link_to destroy_user_session_path, class: "nav-item" do %>
+    <span class="nav-link text-white">Logout</span>
+    <% end %>
+  </ul>
+</div>
