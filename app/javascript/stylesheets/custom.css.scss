@@ -21,7 +21,9 @@ Last change	: 2015/03/27
 9. Misc
 -------------------------------------------------------------------*/
 /*=== 1. General Structure ===*/
-html,body {
+body {
+  width: 100vw;
+  margin: 0;
   height: 100vh;
   background: #efefef;
   padding: 0px;
@@ -295,4 +297,24 @@ label:hover:before {
 
 .sidebar {
   height: 100%;
+}
+
+.login-container {
+  position: relative;
+  height: 100vh;
+  margin-top: 2%;
+  width: 100%;
+}
+
+.main-container {
+  position: relative;
+  margin-top: 2%;
+  height: 100vh;
+}
+
+.messsage {
+  position: absolute;
+  z-index: 1;
+  width: 50%;
+  left: 25%;
 }
